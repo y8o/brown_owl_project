@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brown-Winged Owl GIS Report – Michigan</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .image-viewer {
+      flex: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+    }
+
+    .image-viewer img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 1.5rem;
+      background-color: #f4f4f4;
+      overflow-y: auto;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ddd;
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin: 2px 4px 2px 0;
+      font-size: 0.8rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 4px;
+      text-align: center;
+    }
+
+    code {
+      display: inline-block;
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin: 6px 0;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .image-viewer, .sidebar {
+        flex: none;
+        height: auto;
+      }
+
+      .image-viewer img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-viewer">
+      <img src="./brown_owl_map.jpg" alt="Brown-Winged Owl Map">
+    </div>
+    <div class="sidebar">
+      <h1>Brown-Winged Owl Habitat Analysis</h1>
+      <p>
+        A GIS-based wildlife conservation project identifying nesting and foraging patterns of the fictional
+        brown-winged owl species in Northern Michigan. The goal is to assist timber managers by identifying
+        protected areas around sensitive habitats.
+      </p>
+      <h2>Tools Used</h2>
+      <span class="tag">ArcGIS</span>
+      <span class="tag">Buffer</span>
+      <span class="tag">Clip</span>
+      <span class="tag">Near</span>
+      <span class="tag">Spatial Join</span>
+      <span class="tag">Attribute Query</span>
+
+      <h2>🪵 Nesting by Vegetation</h2>
+      <table>
+        <thead>
+          <tr><th>Vegetation Type</th><th>Number of Nests</th><th>% of Total</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Oak</td><td>32</td><td>68.09%</td></tr>
+          <tr><td>Aspen</td><td>11</td><td>23.40%</td></tr>
+          <tr><td>Northern Hardwood</td><td>3</td><td>6.38%</td></tr>
+          <tr><td>Upland Mixed</td><td>1</td><td>2.13%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>📐 Nest to Forage Distance</h2>
+      <table>
+        <thead>
+          <tr><th>Minimum</th><th>Maximum</th><th>Average</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>6.88 m</td><td>308.68 m</td><td>39.76 m</td></tr>
+        </tbody>
+      </table>
+
+      <h2>🌲 Forest Area Lost</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Cover Type</th>
+            <th>Area Owned (ha)</th>
+            <th>Lost Area (ha)</th>
+            <th>% Lost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Oak</td><td>3,504.35</td><td>188.22</td><td>5.37%</td></tr>
+          <tr><td>Aspen</td><td>1,248.08</td><td>67.54</td><td>5.41%</td></tr>
+          <tr><td>Northern Hardwood</td><td>473.41</td><td>20.07</td><td>4.24%</td></tr>
+          <tr><td>Upland Mixed</td><td>123.46</td><td>7.75</td><td>6.28%</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>5,678.59</strong></td><td><strong>286.34</strong></td><td><strong>5.04%</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>🔍 Key Findings</h2>
+      <ul>
+        <li>Owls strongly prefer oak and aspen cover types for nesting (91% of nests).</li>
+        <li>Average nest-to-foraging site distance is ~40 meters—proximity is key.</li>
+        <li>Oak has the largest absolute area lost (188.22 ha), but upland mixed has the highest relative loss (6.28%).</li>
+        <li>Overall, 286.34 ha or 5.04% of forested land is protected due to nesting buffers.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
