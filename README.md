@@ -8,7 +8,7 @@ A GIS-based spatial analysis project for forest management and wildlife conserva
 
 ---
 
-## 🌲 Project Overview
+## Project Overview
 
 The objective of this lab was to analyze spatial patterns in owl habitat use to support conservation-oriented forest management. Key goals included:
 
@@ -19,7 +19,7 @@ The objective of this lab was to analyze spatial patterns in owl habitat use to 
 
 ---
 
-## 🧰 Technologies and Tools Used
+## Technologies and Tools Used
 
 - **ArcGIS Desktop**  
   - Spatial Join  
@@ -37,9 +37,9 @@ The objective of this lab was to analyze spatial patterns in owl habitat use to 
 
 ---
 
-## 📊 Analytical Results
+## Analytical Results
 
-### 🪵 Nesting Preferences by Vegetation
+### Nesting Preferences by Vegetation
 
 | Vegetation Type    | Number of Nests | % of Total Nests |
 |--------------------|------------------|------------------|
@@ -52,7 +52,7 @@ The objective of this lab was to analyze spatial patterns in owl habitat use to 
 
 ---
 
-### 📐 Nest-to-Foraging Site Distances
+### Nest-to-Foraging Site Distances
 
 | Metric   | Distance (meters) |
 |----------|-------------------|
@@ -64,7 +64,7 @@ The objective of this lab was to analyze spatial patterns in owl habitat use to 
 
 ---
 
-### 🌲 Forest Area Lost Due to Protection Buffers
+### Forest Area Lost Due to Protection Buffers
 
 | Forested Type         | Area Owned (ha) | Lost Area (ha) | % Lost |
 |------------------------|-----------------|----------------|--------|
@@ -79,7 +79,7 @@ The objective of this lab was to analyze spatial patterns in owl habitat use to 
 
 ---
 
-## 🔍 Key Findings
+## Key Findings
 
 - **Preferred Nesting**: Oak and aspen dominate nest locations.
 - **Proximity Advantage**: Owls tend to nest within 40m of their foraging areas.
@@ -87,7 +87,7 @@ The objective of this lab was to analyze spatial patterns in owl habitat use to 
 
 ---
 
-## 📌 Notes
+## Notes
 
 - The brown-winged owl is fictitious. This lab was created as an instructional GIS exercise simulating real-world wildlife planning.
 - The map includes synthetic nesting data but follows valid analytical methods suitable for use in forestry and environmental contexts.
